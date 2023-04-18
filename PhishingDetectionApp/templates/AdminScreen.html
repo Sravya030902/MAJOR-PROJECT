@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>PHISHING WEBSITE DETECTION</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Detection of Phishing Website using SVM & Light GBM </font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+
+	<ul><center>
+			<li class="first current_page_item"><a href="{% url 'RunSVM' %}"><font size="" color="yellow">Run SVM Algorithm </font></a></li>
+			<li class="first current_page_item"><a href="{% url 'RunLGBM' %}"><font size="" color="yellow">Run Light GBM Algorithm</font></a></li>
+		
+		<li class="first current_page_item"><a href="{% url 'Predict' %}"><font size="" color="yellow">Test Your URL</font></a></li>
+		
+		<li class="first current_page_item"><a href="{% url 'index' %}"><font size="" color="yellow">Logout</font></a></li>
+		</center></ul>
+		<br class="clearfix" />
+	</div>
+	<div id="splash">
+		<img class="pic" src="{% static 'images/graphic.jpg' %}" width="870" height="230" alt="" />
+	</div>
+	<br/>
+	 <font size="" color="red"><center>{{ data|safe }}</center></font><br/>
+
+<p align="justify"><font size="3" color="black"  style="font-family: Comic Sans MS">
+	Detection of Phishing Website using SVM & Light GBM</p>
+</body>
+</html>
